@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Exo", sans-serif;
+  background-color: #002445;
+  background-image: url(./assets/BACKGROUND.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+
+  display: grid;
+  place-content: center;
+  padding: 0 24px;
+  min-height: 100vh;
+}
+
+.card {
+  display: flex;
+  padding-left: 64px;
+  align-items: center;
+  gap: 52px;
+  width: 100%;
+  max-width: 893px;
+  color: white;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(217, 217, 217, 0.01);
+  backdrop-filter: blur(2.5px);
+}
+
+.card .info {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  font-size: 14px;
+}
+
+.card .info h1 {
+  text-transform: uppercase;
+  font-size: 24px;
+}
+
+.card .info .atributos {
+  display: flex;
+  align-items: flex-start;
+  gap: 42px;
+}
+
+.card .info .atributos .atributo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.card .info .atributos .atributo .barra {
+  width: 72px;
+  height: 185px;
+  background-color: #011e38;
+  border-radius: 14px;
+  position: relative;
+}
+
+.barra .quantidade {
+  width: 100%;
+  background-color: #25748d;
+  border-radius: 14px;
+  position: absolute;
+  bottom: 0;
+}
+
+.barra .quantidade.ataque {
+  height: 92%;
+}
+
+.barra .quantidade.defesa {
+  height: 63%;
+}
+
+.barra .quantidade.bloqueio {
+  height: 46%;
+}
+
+.barra .quantidade.saque {
+  height: 100%;
+}
+
+.card .info .atributos .atributo .legenda {
+  font-weight: 700;
+}
+
+@media (max-width: 1000px) {
+  .card {
+    flex-direction: column-reverse;
+    padding: 32px;
+    gap: 32px;
+
+    width: 100%;
+    max-width: 893px;
+  }
+
+  .card h1 {
+    text-align: center;
+  }
+}
